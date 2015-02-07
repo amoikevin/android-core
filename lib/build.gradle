@@ -4,5 +4,7 @@ apply from: '../config/android-library.gradle'
 apply from: '../config/maven_push.gradle'
 
 dependencies {
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.github.snowdream.android.util:log:1.1.0'
 }
 
