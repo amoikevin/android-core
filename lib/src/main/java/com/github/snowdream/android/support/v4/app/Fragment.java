@@ -1,4 +1,4 @@
-package com.github.snowdream.android.support;
+package com.github.snowdream.android.support.v4.app;
 
 import android.app.Activity;
 import android.content.Context;

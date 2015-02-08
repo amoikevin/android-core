@@ -1,4 +1,4 @@
-package com.github.snowdream.android.support;
+package com.github.snowdream.android.support.v4.app;
 
 import android.content.Context;
 
@@ -18,7 +18,7 @@ public class FragmentActivity extends android.support.v4.app.FragmentActivity {
      *
      * @see android.support.v4.app.FragmentActivity#finish
      */
-    public void finishActivity() {
+    final public void finishActivity() {
         finish();
     }
 
