@@ -9,7 +9,7 @@ public class FragmentActivity extends android.support.v4.app.FragmentActivity {
     /**
      * @return the context from the activity
      */
-    final public Context getContext() {
+    public final Context getContext() {
         return getBaseContext();
     }
 
@@ -18,7 +18,7 @@ public class FragmentActivity extends android.support.v4.app.FragmentActivity {
      *
      * @see android.support.v4.app.FragmentActivity#finish
      */
-    final public void finishActivity() {
+    public final void finishActivity() {
         finish();
     }
 

@@ -10,9 +10,9 @@ import java.util.List;
  */
 public class Fragment extends android.support.v4.app.Fragment {
     /**
-     * @return the context from the activity
+     * @return the context from the application
      */
-    final public Context getApplicationContext() {
+    public final Context getApplicationContext() {
         Activity activity = getActivity();
 
         if (activity == null) {
@@ -26,7 +26,7 @@ public class Fragment extends android.support.v4.app.Fragment {
     /**
      * @return the context from the activity
      */
-    final public Context getContext() {
+    public final Context getContext() {
         Activity activity = getActivity();
 
         if (activity == null) {
@@ -42,7 +42,7 @@ public class Fragment extends android.support.v4.app.Fragment {
      *
      * @see android.support.v4.app.FragmentActivity#onBackPressed
      */
-    final public void finishFragment() {
+    public final void finishFragment() {
         Activity activity = getActivity();
 
         if (activity == null) {
@@ -59,7 +59,7 @@ public class Fragment extends android.support.v4.app.Fragment {
      * @param step the number of the fragments which will be finished.
      *
      */
-    final public void finishFragmentByStep(int step) {
+    public final void finishFragmentByStep(int step) {
         Activity activity = getActivity();
 
         if (activity == null) {
