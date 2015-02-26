@@ -1,12 +1,13 @@
 package com.github.snowdream.android.core;
 
 import android.content.Context;
+import com.github.snowdream.android.util.BuildConfigUtil;
 import com.github.snowdream.android.util.Log;
 
 /**
  * Created by hui.yang on 2015/2/25.
  */
-public class Snowdream {
+public final class Snowdream {
 
     //Supress default constructor for noninstantiability
     private Snowdream() {
@@ -39,6 +40,9 @@ public class Snowdream {
 
                 Snowdream.context = context;
                 isInit = true;
+
+                Log.setEnabled(isDebug());
+                Log.setGlobalTag("SnowdreamFramework");
             }
         }else{
             Log.i("The FrameWork has been initialized.");
@@ -64,7 +68,22 @@ public class Snowdream {
     /**
      * @return the context from the application. It may be null.
      */
-    public final Context getApplicationContext() {
+    public static final Context getApplicationContext() {
         return  Snowdream.context;
+    }
+
+    /**
+     * The same as BuildConfig.DEBUG
+     *
+     * @return  if true,in Debug mode. otherwise,in Release mode.
+     */
+    public static final boolean isDebug(){
+        boolean isdebug = false;
+
+        if (context != null){
+            isdebug = BuildConfigUtil.isDebug(context);
+        }
+
+        return isdebug;
     }
 }
