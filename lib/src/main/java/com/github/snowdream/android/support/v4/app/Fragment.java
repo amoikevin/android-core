@@ -2,12 +2,14 @@ package com.github.snowdream.android.support.v4.app;
 
 import android.app.Activity;
 import android.content.Context;
+import proguard.annotation.Keep;
 
 import java.util.List;
 
 /**
  * Created by hui.yang on 2015/2/7.
  */
+@Keep
 public class Fragment extends android.support.v4.app.Fragment {
     /**
      * @return the context from the application
